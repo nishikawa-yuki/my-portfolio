@@ -27,6 +27,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("kv-canvas");
   const ctx = canvas.getContext("2d");
 
+  // ✅ ヘッダーの高さを取得して.p-kvにmarginを付与
+  const header = document.querySelector("header");
+  const kv = document.querySelector(".p-kv");
+
+  function adjustKvMargin() {
+    if (header && kv) {
+      const headerHeight = header.offsetHeight;
+      kv.style.marginTop = `${headerHeight}px`;
+    }
+  }
+  // 初回実行＋リサイズ時に再計算
+  adjustKvMargin();
+  window.addEventListener("resize", adjustKvMargin);
+
   // リサイズ対応
   function resizeCanvas() {
     canvas.width = canvas.clientWidth;
