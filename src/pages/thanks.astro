@@ -3,10 +3,18 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="お問い合わせありがとうございました。 | 西川勇気 ポートフォリオ">
-	<main class="flex flex-col items-center justify-center min-h-screen bg-gray-50 text-gray-800 px-6">
-		<h1 class="text-3xl md:text-4xl font-semibold text-center">
+	<main class="flex flex-col items-center justify-center min-h-screen bg-gray-50 text-gray-800 px-6 text-center">
+		<h1 class="text-3xl md:text-4xl font-semibold mb-8">
 			お問い合わせありがとうございました。<br>
 			後ほど担当者よりご連絡いたします。
 		</h1>
+
+		<!-- トップへ戻るボタン -->
+		<a
+			href="/"
+			class="bg-gray-800 text-white px-8 py-3 rounded-full hover:bg-gray-700 transition cursor-pointer shadow-sm"
+		>
+			トップに戻る
+		</a>
 	</main>
 </Layout>
